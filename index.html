@@ -1,54 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Todo App</title>
-    <meta name="description" content="A simple, elegant Todo application to manage your tasks effectively.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="app">
-      <header class="app-header">
-        <h1>Task Master</h1>
-        <p>Stay organized, focused, and get things done.</p>
-        <div class="workflow-tip">
-          <span class="tip-icon">💡</span>
-          <span class="tip-text"><strong>Workflow:</strong> Add a task below -> Click to complete -> details to edit -> trash to delete.</span>
-        </div>
-      </header>
 
-      <main class="todo-container">
-        <div class="input-group">
-          <input type="text" id="todo-input" placeholder="What needs to be done?" aria-label="New task input">
-          <button id="add-btn" aria-label="Add task">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            Add
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Todo App</title>
+  <meta name="description" content="A simple, elegant Todo application to manage your tasks effectively.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
-        <div class="filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="active">Active</button>
-          <button class="filter-btn" data-filter="completed">Completed</button>
-        </div>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>Task Master</h1>
+      <p>Stay organized, focused, and get things done.</p>
+      <div class="workflow-tip">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text"><strong>Workflow:</strong> Add a task below -> Click to complete -> details to edit ->
+          trash to delete.</span>
+      </div>
+    </header>
 
-        <ul id="todo-list" class="todo-list" aria-live="polite">
-          <!-- TODO Items will be injected here -->
-          <li class="empty-state">
-            <p>No tasks yet. Add one above!</p>
-          </li>
-        </ul>
+    <main class="todo-container">
+      <div class="input-group">
+        <input type="text" id="todo-input" placeholder="What needs to be done?" aria-label="New task input">
+        <button id="add-btn" aria-label="Add task">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          Add
+        </button>
+      </div>
 
-        <footer class="app-footer">
-          <span id="items-left">0 items left</span>
-          <button id="clear-completed" class="text-btn">Clear Completed</button>
-        </footer>
-      </main>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-    <div id="notification-area"></div>
-  </body>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite">
+        <!-- TODO Items will be injected here -->
+        <li class="empty-state">
+          <p>No tasks yet. Add one above!</p>
+        </li>
+      </ul>
+
+      <footer class="app-footer">
+        <span id="items-left">0 items left</span>
+        <button id="clear-completed" class="text-btn">Clear Completed</button>
+      </footer>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+  <div id="notification-area"></div>
+</body>
+
 </html>
